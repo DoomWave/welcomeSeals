@@ -2,7 +2,7 @@ import { Image, StyleSheet, Text,View, ImageBackground, TextInput } from 'react-
 import React from 'react';
 
 export default function HomeScreen() {
-  const [text, onChangeText] = React.useState('Useless Text');
+  const [text, onChangeText] = React.useState('Ready to join?');
   return (
     <View style={{backgroundColor: "blue", flex: 1}}>
       <Image
@@ -16,7 +16,7 @@ export default function HomeScreen() {
       />
       <Text style={styles.sealName}>SGT. Seal D. Goggings</Text>
       <Text style={styles.Age}>24 Years old</Text>
-      <Text style={styles.description}>For David Goggins, childhood was a nightmare -- poverty, prejudice, and physical abuse colored his days and haunted his nights.
+      <Text style={styles.description}>For the Seal D. Goggins, childhood was a nightmare -- poverty, prejudice, and physical abuse colored his days and haunted his nights.
          But through self-discipline, mental toughness, and hard work, Goggins transformed himself from a depressed, overweight young man with no future into a U.S. Armed Forces icon and one of the world's top endurance athletes. 
          The only man in history to complete elite training as a Navy SEAL, Army Ranger, and Air Force Tactical Air Controller, 
          he went on to set records in numerous endurance events, 
@@ -24,7 +24,7 @@ export default function HomeScreen() {
          <TextInput 
          style={styles.input}
          onChangeText={onChangeText}
-         value={Text}
+         value={text}
          />
     </View>
 
@@ -35,8 +35,8 @@ const styles = StyleSheet.create({
  sealName: {
   color: 'white',
    alignSelf: 'center',
-   fontSize: '40px',
-  fontFamily: ""
+   fontSize: 40,
+   fontFamily: ""
   },
   
   description: {
@@ -48,9 +48,10 @@ const styles = StyleSheet.create({
     color: 'white',
   },
   input: {
-    height: 40,
-    margin: 12,
+    height: 20,
+    margin: 10,
     borderWidth: 1,
-    padding: 10,
+    padding: 5,
+
   },
 });
